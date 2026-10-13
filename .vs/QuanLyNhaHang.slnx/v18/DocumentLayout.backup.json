@@ -1,0 +1,511 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\database\\seeddata.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\database\\seeddata.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\database\\createdatabase.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\database\\createdatabase.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\helpers\\messagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\helpers\\messagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\helpers\\validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\helpers\\validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\service\\statisticsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\service\\statisticsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\service\\servicetimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\service\\servicetimeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\service\\tableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\service\\tableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\service\\kitchenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\service\\kitchenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\data\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\data\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\data\\menurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\data\\menurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\data\\tablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\data\\tablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\data\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\data\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\data\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\data\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\models\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\models\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\models\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\models\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\models\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\models\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\forms\\formusermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\forms\\formusermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\forms\\formstatistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\forms\\formstatistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\forms\\formtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\forms\\formtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\forms\\formkitchen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\forms\\formkitchen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\forms\\formorderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\forms\\formorderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\forms\\formorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\forms\\formorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\forms\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\forms\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\forms\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\forms\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\database\\createdatabase.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\database\\createdatabase.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|c:\\users\\quanpc\\source\\repos\\quanlynhahang\\quanlynhahang\\database\\seeddata.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A06A3E3D-6024-43C5-98EF-A6EEE1455635}|QuanLyNhaHang\\QuanLyNhaHang.csproj|solutionrelative:quanlynhahang\\database\\seeddata.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SeedData.sql ",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Database\\SeedData.sql",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Database\\SeedData.sql",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Database\\SeedData.sql",
+              "RelativeToolTip": "QuanLyNhaHang\\Database\\SeedData.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-10-13T14:41:22.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateDatabase.sql ",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Database\\CreateDatabase.sql",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Database\\CreateDatabase.sql",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Database\\CreateDatabase.sql",
+              "RelativeToolTip": "QuanLyNhaHang\\Database\\CreateDatabase.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-10-13T14:41:06.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MessageHelper.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Helpers\\MessageHelper.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Helpers\\MessageHelper.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Helpers\\MessageHelper.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Helpers\\MessageHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:39:45.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ValidationHelper.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Helpers\\ValidationHelper.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Helpers\\ValidationHelper.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Helpers\\ValidationHelper.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Helpers\\ValidationHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:39:28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StatisticsService.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Service\\StatisticsService.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Service\\StatisticsService.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Service\\StatisticsService.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Service\\StatisticsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:39:11.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServiceTimeService.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Service\\ServiceTimeService.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Service\\ServiceTimeService.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Service\\ServiceTimeService.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Service\\ServiceTimeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:38:59.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TableService.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Service\\TableService.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Service\\TableService.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Service\\TableService.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Service\\TableService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:38:44.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "KitchenService.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Service\\KitchenService.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Service\\KitchenService.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Service\\KitchenService.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Service\\KitchenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:38:33.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Service\\OrderService.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Service\\OrderService.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Service\\OrderService.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Service\\OrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:38:21.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Service\\AuthService.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Service\\AuthService.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Service\\AuthService.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Service\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:38:06.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Data\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Data\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Data\\OrderRepository.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Data\\OrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:37:37.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MenuRepository.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Data\\MenuRepository.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Data\\MenuRepository.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Data\\MenuRepository.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Data\\MenuRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:37:23.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TableRepository.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Data\\TableRepository.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Data\\TableRepository.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Data\\TableRepository.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Data\\TableRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:37:07.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Data\\UserRepository.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Data\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Data\\UserRepository.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Data\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:36:51.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DatabaseConnection.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Data\\DatabaseConnection.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Data\\DatabaseConnection.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Data\\DatabaseConnection.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Data\\DatabaseConnection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:36:36.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "OrderStatus.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Models\\OrderStatus.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Models\\OrderStatus.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Models\\OrderStatus.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Models\\OrderStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:35:33.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Models\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Models\\OrderDetail.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Models\\OrderDetail.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Models\\OrderDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:35:11.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Models\\Order.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:34:55.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MenuItem.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Models\\MenuItem.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Models\\MenuItem.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Models\\MenuItem.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Models\\MenuItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:34:38.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Table.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Models\\Table.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Models\\Table.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Models\\Table.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Models\\Table.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:34:17.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Models\\User.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Models\\User.cs",
+              "RelativeToolTip": "QuanLyNhaHang\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:34:04.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "FormUserManagement.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Forms\\FormUserManagement.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Forms\\FormUserManagement.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Forms\\FormUserManagement.cs [Design]",
+              "RelativeToolTip": "QuanLyNhaHang\\Forms\\FormUserManagement.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:28:51.118Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FormStatistics.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Forms\\FormStatistics.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Forms\\FormStatistics.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Forms\\FormStatistics.cs [Design]",
+              "RelativeToolTip": "QuanLyNhaHang\\Forms\\FormStatistics.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:28:08.455Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FormTable.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Forms\\FormTable.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Forms\\FormTable.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Forms\\FormTable.cs [Design]",
+              "RelativeToolTip": "QuanLyNhaHang\\Forms\\FormTable.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:27:43.693Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FormKitchen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Forms\\FormKitchen.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Forms\\FormKitchen.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Forms\\FormKitchen.cs [Design]",
+              "RelativeToolTip": "QuanLyNhaHang\\Forms\\FormKitchen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:27:30.237Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FormOrderDetail.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Forms\\FormOrderDetail.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Forms\\FormOrderDetail.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Forms\\FormOrderDetail.cs [Design]",
+              "RelativeToolTip": "QuanLyNhaHang\\Forms\\FormOrderDetail.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:27:15.891Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "FormOrder.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Forms\\FormOrder.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Forms\\FormOrder.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Forms\\FormOrder.cs [Design]",
+              "RelativeToolTip": "QuanLyNhaHang\\Forms\\FormOrder.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:26:56.548Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "FormLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Forms\\FormLogin.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Forms\\FormLogin.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Forms\\FormLogin.cs [Design]",
+              "RelativeToolTip": "QuanLyNhaHang\\Forms\\FormLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:25:17.498Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "FormMain.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Forms\\FormMain.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang\\Forms\\FormMain.cs",
+              "ToolTip": "C:\\Users\\QuanPc\\source\\repos\\QuanLyNhaHang\\QuanLyNhaHang\\Forms\\FormMain.cs [Design]",
+              "RelativeToolTip": "QuanLyNhaHang\\Forms\\FormMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T14:24:15.893Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
