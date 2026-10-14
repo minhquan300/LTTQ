@@ -1,0 +1,23 @@
+# Visual Studio
+.vs/
+
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nupkg
+.nuget/
+
+# Temporary files
+*.cache
+*.log
+
+# SQL backup
+SeedData_backup.sql
