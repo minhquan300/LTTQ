@@ -56,9 +56,22 @@ namespace QuanLyNhaHang.Forms
                 }
 
                 // Đăng nhập thành công
+                // Đăng nhập thành công
                 MessageBox.Show("Đăng nhập thành công!");
 
-                // Tạm thời chưa mở FormMain
+                // Tạo FormMain
+                QuanLyNhaHang.FormMain formMain = new QuanLyNhaHang.FormMain(user);
+
+                // Ẩn FormLogin
+                // Ẩn Form đăng nhập
+                this.Hide();
+
+                // Mở FormMain
+                formMain.ShowDialog();
+
+                // Khi FormMain đóng, quay lại màn hình đăng nhập
+                txtPassword.Clear();
+                this.Show();
             }
             catch (Exception ex)
             {

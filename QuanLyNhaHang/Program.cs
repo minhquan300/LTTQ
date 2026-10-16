@@ -17,13 +17,7 @@ namespace QuanLyNhaHang
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            string password = "NhaHang@2026";
-
-            string passwordHash =
-                QuanLyNhaHang.Service.PasswordHelper.HashPassword(password);
-
-            Clipboard.SetText(passwordHash);
-            MessageBox.Show("Đã sao chép mật khẩu băm vào Clipboard!");
+            
 
             System.Windows.Forms.Application.Run(new FormLogin());
 
