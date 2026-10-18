@@ -10,12 +10,16 @@ namespace QuanLyNhaHang
         public FormMain()
         {
             InitializeComponent();
-
+            CapNhatDongHo();
             BoGocButton(btnTable, 10);
             BoGocButton(btnOrder, 10);
             BoGocButton(btnKitchen, 10);
             BoGocButton(btnStatistics, 10);
             BoGocButton(btnUserManagement, 10);
+            BoGocButton(btnDashboard, 10);
+            BoGocPanel(pnlClock, 12);
+            BoGocPanel(pnlAccountInfo, 12);
+            CaiDatMauMenu();
         }
         internal FormMain(User user) : this()
         {
@@ -23,8 +27,37 @@ namespace QuanLyNhaHang
 
             lblEmployeeName.Text = "Xin chào! " + user.FullName;
 
+            // Hiển thị thông tin tài khoản ở cuối menu
+            lblAccountName.Text = user.FullName;
+
+            switch (user.RoleID)
+            {
+                case 1:
+                    lblAccountRole.Text = "Quản lý";
+                    break;
+
+                case 2:
+                    lblAccountRole.Text = "Thu ngân";
+                    break;
+
+                case 3:
+                    lblAccountRole.Text = "Nhân viên phục vụ";
+                    break;
+
+                case 4:
+                    lblAccountRole.Text = "Đầu bếp";
+                    break;
+
+                default:
+                    lblAccountRole.Text = "Không xác định";
+                    break;
+            }
+
+            lblAccountStatus.Text = "Đang hoạt động";
+
             PhanQuyen(user);
             SapXepMenu();
+            OpenFormInPanel(new QuanLyNhaHang.Forms.FormDashboard());
         }
 
         private void BoGocButton(Button btn, int radius)
@@ -77,6 +110,10 @@ namespace QuanLyNhaHang
 
             // Xác định chức năng tương ứng với Form
             string chucNang = "";
+            if (form is QuanLyNhaHang.Forms.FormDashboard)
+            {
+                chucNang = "Dashboard";
+            }
 
             if (form is QuanLyNhaHang.Forms.FormTable)
                 chucNang = "Table";
@@ -88,6 +125,8 @@ namespace QuanLyNhaHang
                 chucNang = "Statistics";
             else if (form is QuanLyNhaHang.Forms.FormUserManagement)
                 chucNang = "UserManagement";
+            else if (form is QuanLyNhaHang.Forms.FormDashboard)
+                chucNang = "Dashboard";
 
             // Kiểm tra quyền trước khi mở
             if (!CoQuyen(currentUser.RoleID, chucNang))
@@ -189,8 +228,14 @@ namespace QuanLyNhaHang
         }
         private bool CoQuyen(int roleID, string chucNang)
         {
+            // Tất cả tài khoản hợp lệ đều được xem Dashboard
+            if (chucNang == "Dashboard")
+                return true;
+            if (chucNang == "Dashboard")
+                return roleID >= 1 && roleID <= 4;
+
             if (roleID == 1)
-                return true; // Quản lý có tất cả quyền
+                return true;
 
             if (roleID == 2)
                 return chucNang == "Order";
@@ -203,15 +248,18 @@ namespace QuanLyNhaHang
 
             return false;
         }
+
         private void SapXepMenu()
         {
             if (currentUser == null)
                 return;
 
-            int viTriY = 25;
+            int viTriY = 36;
+            int khoangCach = 70;
 
             Button[] danhSachNut =
             {
+        btnDashboard,
         btnTable,
         btnOrder,
         btnKitchen,
@@ -219,8 +267,19 @@ namespace QuanLyNhaHang
         btnUserManagement
     };
 
+            PictureBox[] danhSachIcon =
+            {
+        picHome,
+        picTable,
+        picOrder,
+        picKitchen,
+        picStatistics,
+        picEmployee
+    };
+
             string[] danhSachChucNang =
             {
+        "Dashboard",
         "Table",
         "Order",
         "Kitchen",
@@ -230,14 +289,147 @@ namespace QuanLyNhaHang
 
             for (int i = 0; i < danhSachNut.Length; i++)
             {
+                Button nut = danhSachNut[i];
+                PictureBox icon = danhSachIcon[i];
+
                 if (CoQuyen(currentUser.RoleID, danhSachChucNang[i]))
                 {
-                    danhSachNut[i].Location = new Point(10, viTriY);
-                    viTriY += 55;
+                    // Hiển thị nút và icon
+                    nut.Visible = true;
+                    icon.Visible = true;
+
+                    // Giữ nguyên khoảng cách tương đối giữa icon và nút
+                    int doLechY = icon.Top - nut.Top;
+
+                    // Di chuyển nút đến vị trí mới
+                    nut.Location = new Point(10, viTriY);
+
+                    // Di chuyển icon theo nút
+                    icon.Location = new Point(icon.Left, viTriY + doLechY);
+
+                    // Vị trí của nút tiếp theo
+                    viTriY += khoangCach;
+                }
+                else
+                {
+                    // Không có quyền thì ẩn cả nút và icon
+                    nut.Visible = false;
+                    icon.Visible = false;
                 }
             }
         }
 
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            OpenFormInPanel(new QuanLyNhaHang.Forms.FormDashboard());
+        }
+        private void timerClock_Tick(object sender, EventArgs e)
+        {
+            CapNhatDongHo();
+        }
+
+        private void CapNhatDongHo()
+        {
+            DateTime hienTai = DateTime.Now;
+
+            lblClockTime.Text = hienTai.ToString("HH:mm:ss");
+
+            lblClockDate.Text = hienTai.ToString(
+                "dddd, dd/MM/yyyy",
+                new System.Globalization.CultureInfo("vi-VN")
+            );
+        }
+        private void BoGocPanel(Panel panel, int banKinh)
+        {
+            GraphicsPath path = new GraphicsPath();
+
+            int d = banKinh * 2;
+
+            path.AddArc(0, 0, d, d, 180, 90);
+            path.AddArc(panel.Width - d, 0, d, d, 270, 90);
+            path.AddArc(panel.Width - d, panel.Height - d, d, d, 0, 90);
+            path.AddArc(0, panel.Height - d, d, d, 90, 90);
+
+            path.CloseFigure();
+
+            Region oldRegion = panel.Region;
+            panel.Region = new Region(path);
+
+            oldRegion?.Dispose();
+            path.Dispose();
+        }
+
+        private void picTable_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picLogo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CaiDatMauMenu()
+        {
+            Button[] danhSachNut =
+            {
+        btnDashboard,
+        btnTable,
+        btnOrder,
+        btnKitchen,
+        btnStatistics,
+        btnUserManagement
+    };
+
+            PictureBox[] danhSachIcon =
+            {
+        picHome,
+        picTable,
+        picOrder,
+        picKitchen,
+        picStatistics,
+        picEmployee
+    };
+
+            for (int i = 0; i < danhSachNut.Length; i++)
+            {
+                Button nut = danhSachNut[i];
+                PictureBox icon = danhSachIcon[i];
+
+                // Màu nền ban đầu của icon
+                icon.BackColor = nut.BackColor;
+
+                // Khi chuột vào nút
+                nut.MouseEnter += (s, e) =>
+                {
+                    icon.BackColor = nut.FlatAppearance.MouseOverBackColor;
+                };
+
+                // Khi chuột rời nút
+                nut.MouseLeave += (s, e) =>
+                {
+                    icon.BackColor = nut.BackColor;
+                };
+
+                // Khi chuột vào icon
+                icon.MouseEnter += (s, e) =>
+                {
+                    icon.BackColor = nut.FlatAppearance.MouseOverBackColor;
+                };
+
+                // Khi chuột rời icon
+                icon.MouseLeave += (s, e) =>
+                {
+                    icon.BackColor = nut.BackColor;
+                };
+            }
+        }
 
     }
 

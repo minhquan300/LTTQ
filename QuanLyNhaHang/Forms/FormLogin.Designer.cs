@@ -28,7 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             pnlLeft = new Panel();
+            picFeatureEmployee = new PictureBox();
+            picFeatureKitchen = new PictureBox();
+            picFeatureTable = new PictureBox();
+            lblFeatureEmployee = new Label();
+            lblFeatureKitchen = new Label();
+            lblFeatureTable = new Label();
+            pnlDivider = new Panel();
+            lblSubtitle = new Label();
+            picRestaurantLogo = new PictureBox();
             lblRestaurant = new Label();
             pnlLogin = new Panel();
             lblMessage = new Label();
@@ -40,29 +50,142 @@
             lblUsername = new Label();
             lblTitle = new Label();
             pnlLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picFeatureEmployee).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picFeatureKitchen).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picFeatureTable).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picRestaurantLogo).BeginInit();
             pnlLogin.SuspendLayout();
             SuspendLayout();
             // 
             // pnlLeft
             // 
             pnlLeft.BackColor = Color.FromArgb(25, 59, 103);
+            pnlLeft.Controls.Add(picFeatureEmployee);
+            pnlLeft.Controls.Add(picFeatureKitchen);
+            pnlLeft.Controls.Add(picFeatureTable);
+            pnlLeft.Controls.Add(lblFeatureEmployee);
+            pnlLeft.Controls.Add(lblFeatureKitchen);
+            pnlLeft.Controls.Add(lblFeatureTable);
+            pnlLeft.Controls.Add(pnlDivider);
+            pnlLeft.Controls.Add(lblSubtitle);
+            pnlLeft.Controls.Add(picRestaurantLogo);
             pnlLeft.Controls.Add(lblRestaurant);
             pnlLeft.Location = new Point(0, 0);
             pnlLeft.Name = "pnlLeft";
             pnlLeft.Size = new Size(320, 460);
             pnlLeft.TabIndex = 0;
             // 
+            // picFeatureEmployee
+            // 
+            picFeatureEmployee.BackColor = Color.Transparent;
+            picFeatureEmployee.Image = (Image)resources.GetObject("picFeatureEmployee.Image");
+            picFeatureEmployee.Location = new Point(35, 350);
+            picFeatureEmployee.Name = "picFeatureEmployee";
+            picFeatureEmployee.Size = new Size(26, 26);
+            picFeatureEmployee.SizeMode = PictureBoxSizeMode.Zoom;
+            picFeatureEmployee.TabIndex = 9;
+            picFeatureEmployee.TabStop = false;
+            // 
+            // picFeatureKitchen
+            // 
+            picFeatureKitchen.BackColor = Color.Transparent;
+            picFeatureKitchen.Image = Properties.Resources.qlnhabep;
+            picFeatureKitchen.Location = new Point(35, 310);
+            picFeatureKitchen.Name = "picFeatureKitchen";
+            picFeatureKitchen.Size = new Size(24, 24);
+            picFeatureKitchen.SizeMode = PictureBoxSizeMode.Zoom;
+            picFeatureKitchen.TabIndex = 8;
+            picFeatureKitchen.TabStop = false;
+            // 
+            // picFeatureTable
+            // 
+            picFeatureTable.BackColor = Color.Transparent;
+            picFeatureTable.Image = (Image)resources.GetObject("picFeatureTable.Image");
+            picFeatureTable.Location = new Point(35, 270);
+            picFeatureTable.Name = "picFeatureTable";
+            picFeatureTable.Size = new Size(24, 24);
+            picFeatureTable.SizeMode = PictureBoxSizeMode.Zoom;
+            picFeatureTable.TabIndex = 7;
+            picFeatureTable.TabStop = false;
+            // 
+            // lblFeatureEmployee
+            // 
+            lblFeatureEmployee.BackColor = Color.Transparent;
+            lblFeatureEmployee.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            lblFeatureEmployee.ForeColor = Color.White;
+            lblFeatureEmployee.Location = new Point(75, 350);
+            lblFeatureEmployee.Name = "lblFeatureEmployee";
+            lblFeatureEmployee.Size = new Size(220, 30);
+            lblFeatureEmployee.TabIndex = 6;
+            lblFeatureEmployee.Text = "Quản lý nhân viên";
+            lblFeatureEmployee.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblFeatureKitchen
+            // 
+            lblFeatureKitchen.BackColor = Color.Transparent;
+            lblFeatureKitchen.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            lblFeatureKitchen.ForeColor = Color.White;
+            lblFeatureKitchen.Location = new Point(75, 310);
+            lblFeatureKitchen.Name = "lblFeatureKitchen";
+            lblFeatureKitchen.Size = new Size(270, 30);
+            lblFeatureKitchen.TabIndex = 5;
+            lblFeatureKitchen.Text = "Quản lý hoạt động nhà bếp";
+            lblFeatureKitchen.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblFeatureTable
+            // 
+            lblFeatureTable.BackColor = Color.Transparent;
+            lblFeatureTable.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            lblFeatureTable.ForeColor = Color.White;
+            lblFeatureTable.Location = new Point(75, 270);
+            lblFeatureTable.Name = "lblFeatureTable";
+            lblFeatureTable.Size = new Size(270, 30);
+            lblFeatureTable.TabIndex = 4;
+            lblFeatureTable.Text = "Quản lý bàn và đơn hàng";
+            lblFeatureTable.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // pnlDivider
+            // 
+            pnlDivider.BackColor = Color.SteelBlue;
+            pnlDivider.Location = new Point(65, 250);
+            pnlDivider.Name = "pnlDivider";
+            pnlDivider.Size = new Size(190, 2);
+            pnlDivider.TabIndex = 3;
+            // 
+            // lblSubtitle
+            // 
+            lblSubtitle.BackColor = Color.Transparent;
+            lblSubtitle.Font = new Font("Segoe UI", 7.8F, FontStyle.Italic, GraphicsUnit.Point, 163);
+            lblSubtitle.ForeColor = Color.White;
+            lblSubtitle.Location = new Point(10, 200);
+            lblSubtitle.Name = "lblSubtitle";
+            lblSubtitle.Size = new Size(300, 30);
+            lblSubtitle.TabIndex = 2;
+            lblSubtitle.Text = "HỆ THỐNG QUẢN LÝ NỘI BỘ";
+            lblSubtitle.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // picRestaurantLogo
+            // 
+            picRestaurantLogo.BackColor = Color.Transparent;
+            picRestaurantLogo.Image = (Image)resources.GetObject("picRestaurantLogo.Image");
+            picRestaurantLogo.Location = new Point(120, 50);
+            picRestaurantLogo.Name = "picRestaurantLogo";
+            picRestaurantLogo.Size = new Size(80, 80);
+            picRestaurantLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            picRestaurantLogo.TabIndex = 1;
+            picRestaurantLogo.TabStop = false;
+            // 
             // lblRestaurant
             // 
-            lblRestaurant.AutoSize = true;
             lblRestaurant.BackColor = Color.Transparent;
-            lblRestaurant.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            lblRestaurant.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 163);
             lblRestaurant.ForeColor = SystemColors.ButtonHighlight;
-            lblRestaurant.Location = new Point(35, 141);
+            lblRestaurant.Location = new Point(10, 135);
             lblRestaurant.Name = "lblRestaurant";
-            lblRestaurant.Size = new Size(250, 41);
+            lblRestaurant.Size = new Size(300, 70);
             lblRestaurant.TabIndex = 0;
-            lblRestaurant.Text = "NHÀ HÀNG ABC";
+            lblRestaurant.Text = "QUẢN LÝ NHÀ HÀNG";
+            lblRestaurant.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pnlLogin
             // 
@@ -194,7 +317,10 @@
             Text = "Đăng nhập - Quản lý nhà hàng";
             Load += FormLogin_Load;
             pnlLeft.ResumeLayout(false);
-            pnlLeft.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picFeatureEmployee).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picFeatureKitchen).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picFeatureTable).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picRestaurantLogo).EndInit();
             pnlLogin.ResumeLayout(false);
             pnlLogin.PerformLayout();
             ResumeLayout(false);
@@ -216,5 +342,14 @@
         private CheckBox chkShowPassword;
         private Button btnLogin;
         private Label lblMessage;
+        private PictureBox picRestaurantLogo;
+        private Label lblSubtitle;
+        private Label lblFeatureEmployee;
+        private Label lblFeatureKitchen;
+        private Label lblFeatureTable;
+        private Panel pnlDivider;
+        private PictureBox picFeatureEmployee;
+        private PictureBox picFeatureKitchen;
+        private PictureBox picFeatureTable;
     }
 }
