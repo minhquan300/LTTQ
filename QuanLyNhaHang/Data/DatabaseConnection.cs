@@ -1,15 +1,31 @@
-﻿using Microsoft.Data.SqlClient;
+
+using Microsoft.Data.SqlClient;
+using System.Threading.Tasks;
 
 namespace QuanLyNhaHang.Data
 {
     public class DatabaseConnection
     {
+        private static readonly string _connectionString =
+            @"Server=MSI\SQLEXPRESS;Database=QuanLyNhaHang;Integrated Security=True;TrustServerCertificate=True;";
+
         public static SqlConnection GetConnection()
         {
-            string connectionString =
-                @"Server=MSI\SQLEXPRESS;Database=QuanLyNhaHang;Integrated Security=True;TrustServerCertificate=True;";
+            return new SqlConnection(_connectionString);
+        }
 
-            return new SqlConnection(connectionString);
+        public static async Task<bool> TestConnectionAsync()
+        {
+            try
+            {
+                using var conn = GetConnection();
+                await conn.OpenAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
