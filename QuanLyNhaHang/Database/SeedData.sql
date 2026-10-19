@@ -1,10 +1,10 @@
 ﻿/*
     SEED DATA - QUAN LY NHA HANG
-    Du lieu mau phuc vu kiem thu.
+    Dữ liệu mẫu phục vụ kiểm thử, các nội dung hiển thị đã có dấu tiếng Việt.
     Luu y:
     - Chi chay sau khi da tao database bang QLBH.sql.
-    - Script nay yeu cau cac bang dang rong de tranh trung lap ID.
-    - PasswordHash tam thoi la chuoi danh dau, chua dung de dang nhap.
+    - Chỉ chạy trên database có các bảng rỗng để tránh trùng ID.
+    - PasswordHash vẫn là CHUA_CO_HASH; cần tạo hash hợp lệ để đăng nhập.
 */
 USE [QuanLyNhaHang];
 GO
@@ -25,16 +25,17 @@ BEGIN TRY
        OR EXISTS (SELECT 1 FROM dbo.OrderStatusHistory)
        OR EXISTS (SELECT 1 FROM dbo.OrderDetailStatusHistory)
     BEGIN
-        THROW 50001, N'Cac bang khong rong. Hay dung database moi hoac kiem tra du lieu truoc khi chay SeedData.sql.', 1;
-    END;
+    RAISERROR(N'Các bảng không rỗng. Hãy dùng database mới hoặc kiểm tra dữ liệu trước khi chạy SeedData.sql.', 16, 1);
+    RETURN;
+END;
 
     /* 1. ROLES */
     SET IDENTITY_INSERT dbo.Roles ON;
     INSERT INTO dbo.Roles (RoleID, RoleName, Description) VALUES
-    (1, N'Quan ly', N'Quan ly hoat dong nha hang'),
-    (2, N'Thu ngan', N'Tiep nhan va thanh toan don hang'),
-    (3, N'Phuc vu', N'Tiep nhan yeu cau va phuc vu khach'),
-    (4, N'Dau bep', N'Che bien mon an');
+    (1, N'Quản lý', N'Quản lý hoạt động nhà hàng'),
+    (2, N'Thu ngân', N'Tiếp nhận và thanh toán đơn hàng'),
+    (3, N'Phục vụ', N'Tiếp nhận yêu cầu và phục vụ khách'),
+    (4, N'Đầu bếp', N'Chế biến món ăn');
     SET IDENTITY_INSERT dbo.Roles OFF;
 
     /* 2. EMPLOYEES
@@ -43,38 +44,38 @@ BEGIN TRY
     INSERT INTO dbo.Employees
         (EmployeeID, Username, PasswordHash, FullName, Phone, IsActive, RoleID, CreatedAt)
     VALUES
-    (1, 'admin', N'CHUA_CO_HASH', N'Nguyen Van An', '0901000001', 1, 1, DATEADD(day,-180, SYSDATETIME())),
-    (2, 'manager01', N'CHUA_CO_HASH', N'Tran Thi Bich', '0901000002', 1, 1, DATEADD(day,-160, SYSDATETIME())),
-    (3, 'cashier01', N'CHUA_CO_HASH', N'Le Van Cuong', '0901000003', 1, 2, DATEADD(day,-150, SYSDATETIME())),
-    (4, 'cashier02', N'CHUA_CO_HASH', N'Pham Thi Dung', '0901000004', 1, 2, DATEADD(day,-140, SYSDATETIME())),
-    (5, 'cashier03', N'CHUA_CO_HASH', N'Hoang Van Giang', '0901000005', 1, 2, DATEADD(day,-130, SYSDATETIME())),
-    (6, 'service01', N'CHUA_CO_HASH', N'Vu Thi Hoa', '0901000006', 1, 3, DATEADD(day,-120, SYSDATETIME())),
-    (7, 'service02', N'CHUA_CO_HASH', N'Do Van Hung', '0901000007', 1, 3, DATEADD(day,-115, SYSDATETIME())),
-    (8, 'service03', N'CHUA_CO_HASH', N'Bui Thi Lan', '0901000008', 1, 3, DATEADD(day,-110, SYSDATETIME())),
-    (9, 'service04', N'CHUA_CO_HASH', N'Ngo Van Minh', '0901000009', 1, 3, DATEADD(day,-105, SYSDATETIME())),
-    (10, 'service05', N'CHUA_CO_HASH', N'Dang Thi Ngoc', '0901000010', 1, 3, DATEADD(day,-100, SYSDATETIME())),
-    (11, 'chef01', N'CHUA_CO_HASH', N'Phan Van Phuc', '0901000011', 1, 4, DATEADD(day,-95, SYSDATETIME())),
-    (12, 'chef02', N'CHUA_CO_HASH', N'Ho Thi Quyen', '0901000012', 1, 4, DATEADD(day,-90, SYSDATETIME())),
-    (13, 'chef03', N'CHUA_CO_HASH', N'Nguyen Duc Son', '0901000013', 1, 4, DATEADD(day,-85, SYSDATETIME())),
-    (14, 'chef04', N'CHUA_CO_HASH', N'Tran Van Tuan', '0901000014', 1, 4, DATEADD(day,-80, SYSDATETIME())),
-    (15, 'service06', N'CHUA_CO_HASH', N'Le Thi Yen', '0901000015', 1, 3, DATEADD(day,-75, SYSDATETIME()));
+    (1, 'admin', N'CHUA_CO_HASH', N'Nguyễn Văn An', '0901000001', 1, 1, DATEADD(day,-180, SYSDATETIME())),
+    (2, 'manager01', N'CHUA_CO_HASH', N'Trần Thị Bích', '0901000002', 1, 1, DATEADD(day,-160, SYSDATETIME())),
+    (3, 'cashier01', N'CHUA_CO_HASH', N'Lê Văn Cường', '0901000003', 1, 2, DATEADD(day,-150, SYSDATETIME())),
+    (4, 'cashier02', N'CHUA_CO_HASH', N'Phạm Thị Dung', '0901000004', 1, 2, DATEADD(day,-140, SYSDATETIME())),
+    (5, 'cashier03', N'CHUA_CO_HASH', N'Hoàng Văn Giang', '0901000005', 1, 2, DATEADD(day,-130, SYSDATETIME())),
+    (6, 'service01', N'CHUA_CO_HASH', N'Vũ Thị Hoa', '0901000006', 1, 3, DATEADD(day,-120, SYSDATETIME())),
+    (7, 'service02', N'CHUA_CO_HASH', N'Đỗ Văn Hùng', '0901000007', 1, 3, DATEADD(day,-115, SYSDATETIME())),
+    (8, 'service03', N'CHUA_CO_HASH', N'Bùi Thị Lan', '0901000008', 1, 3, DATEADD(day,-110, SYSDATETIME())),
+    (9, 'service04', N'CHUA_CO_HASH', N'Ngô Văn Minh', '0901000009', 1, 3, DATEADD(day,-105, SYSDATETIME())),
+    (10, 'service05', N'CHUA_CO_HASH', N'Đặng Thị Ngọc', '0901000010', 1, 3, DATEADD(day,-100, SYSDATETIME())),
+    (11, 'chef01', N'CHUA_CO_HASH', N'Phan Văn Phúc', '0901000011', 1, 4, DATEADD(day,-95, SYSDATETIME())),
+    (12, 'chef02', N'CHUA_CO_HASH', N'Hồ Thị Quyên', '0901000012', 1, 4, DATEADD(day,-90, SYSDATETIME())),
+    (13, 'chef03', N'CHUA_CO_HASH', N'Nguyễn Đức Sơn', '0901000013', 1, 4, DATEADD(day,-85, SYSDATETIME())),
+    (14, 'chef04', N'CHUA_CO_HASH', N'Trần Văn Tuấn', '0901000014', 1, 4, DATEADD(day,-80, SYSDATETIME())),
+    (15, 'service06', N'CHUA_CO_HASH', N'Lê Thị Yến', '0901000015', 1, 3, DATEADD(day,-75, SYSDATETIME()));
     SET IDENTITY_INSERT dbo.Employees OFF;
 
     /* 3. CATEGORIES */
     SET IDENTITY_INSERT dbo.Categories ON;
     INSERT INTO dbo.Categories (CategoryID, CategoryName, Description, IsActive) VALUES
-    (1, N'Khai vi', N'Cac mon khai vi', 1),
-    (2, N'Goi va nom', N'Goi, nom va mon tron', 1),
-    (3, N'Mon ga', N'Cac mon che bien tu ga', 1),
-    (4, N'Mon bo', N'Cac mon che bien tu bo', 1),
-    (5, N'Mon heo', N'Cac mon che bien tu heo', 1),
-    (6, N'Hai san', N'Tom, muc, ca va hai san', 1),
-    (7, N'Rau va dau', N'Rau xao va mon dau', 1),
-    (8, N'Com', N'Cac mon com', 1),
-    (9, N'Mi va bun', N'Mi, bun va pho', 1),
-    (10, N'Lau', N'Cac loai lau', 1),
-    (11, N'Trang mieng', N'Trai cay va mon ngot', 1),
-    (12, N'Do uong', N'Tra, nuoc ep va nuoc giai khat', 1);
+    (1, N'Khai vị', N'Các món khai vị', 1),
+    (2, N'Gỏi và nộm', N'Gỏi, nộm và món trộn', 1),
+    (3, N'Món gà', N'Các món chế biến từ gà', 1),
+    (4, N'Món bò', N'Các món chế biến từ bò', 1),
+    (5, N'Món heo', N'Các món chế biến từ heo', 1),
+    (6, N'Hải sản', N'Tôm, mực, cá và hải sản', 1),
+    (7, N'Rau và đậu', N'Rau xào và món đậu', 1),
+    (8, N'Cơm', N'Các món cơm', 1),
+    (9, N'Mì và bún', N'Mì, bún và phở', 1),
+    (10, N'Lẩu', N'Các loại lẩu', 1),
+    (11, N'Tráng miệng', N'Trái cây và món ngọt', 1),
+    (12, N'Đồ uống', N'Trà, nước ép và nước giải khát', 1);
     SET IDENTITY_INSERT dbo.Categories OFF;
 
     /* 4. MENU ITEMS - 100 mon, moi danh muc co nhieu mon */
@@ -82,127 +83,127 @@ BEGIN TRY
     INSERT INTO dbo.MenuItems
         (MenuItemID, ItemName, CategoryID, Price, Description, ImagePath, IsAvailable)
     VALUES
-    (1,N'Khoai tay chien',1,45000,N'Khoai tay chien gion',NULL,1),
-    (2,N'Nem ran',1,55000,N'Nem ran truyen thong',NULL,1),
-    (3,N'Cha gio hai san',1,65000,N'Cha gio nhan hai san',NULL,1),
-    (4,N'Canh ga chien nuoc mam',1,79000,N'Canh ga chien nuoc mam',NULL,1),
-    (5,N'Banh xep chien',1,50000,N'Banh xep chien gion',NULL,1),
-    (6,N'Goi ngo sen tom thit',2,85000,N'Goi ngo sen tom thit',NULL,1),
-    (7,N'Goi bo rau thom',2,89000,N'Goi bo rau thom',NULL,1),
-    (8,N'Nom du du bo kho',2,75000,N'Nom du du bo kho',NULL,1),
-    (9,N'Goi ga xe phay',2,79000,N'Goi ga xe phay',NULL,1),
-    (10,N'Goi xoai tom',2,82000,N'Goi xoai xanh tom tuoi',NULL,1),
-    (11,N'Ga nuong mat ong',3,159000,N'Ga nuong mat ong',NULL,1),
-    (12,N'Ga hap la chanh',3,149000,N'Ga hap la chanh',NULL,1),
-    (13,N'Ga rang muoi',3,169000,N'Ga rang muoi',NULL,1),
-    (14,N'Ga sot me',3,155000,N'Ga chien sot me',NULL,1),
-    (15,N'Canh ga nuong sa',3,99000,N'Canh ga nuong sa',NULL,1),
-    (16,N'Bo luc lac',4,169000,N'Bo luc lac khoai tay',NULL,1),
-    (17,N'Bo xao luc lac',4,159000,N'Bo xao rau cu',NULL,1),
-    (18,N'Bo bit tet',4,189000,N'Bo bit tet sot tieu',NULL,1),
-    (19,N'Bo sot vang',4,149000,N'Bo sot vang an kem banh mi',NULL,1),
-    (20,N'Bo nuong la lot',4,139000,N'Bo nuong la lot',NULL,1),
-    (21,N'Suon heo nuong',5,149000,N'Suon heo nuong mat ong',NULL,1),
-    (22,N'Suon xao chua ngot',5,139000,N'Suon xao chua ngot',NULL,1),
-    (23,N'Ba chi rang chay canh',5,119000,N'Ba chi rang chay canh',NULL,1),
-    (24,N'Thịt kho trung',5,99000,N'Thit kho trung',NULL,1),
-    (25,N'Heo quay',5,159000,N'Heo quay da gion',NULL,1),
-    (26,N'Tom rang muoi',6,179000,N'Tom rang muoi',NULL,1),
-    (27,N'Muc chien gion',6,139000,N'Muc chien gion',NULL,1),
-    (28,N'Muc xao sa ot',6,149000,N'Muc xao sa ot',NULL,1),
-    (29,N'Ca chien xu',6,159000,N'Ca chien xu',NULL,1),
-    (30,N'Tom hap bia',6,189000,N'Tom hap bia',NULL,1),
-    (31,N'Rau muong xao toi',7,55000,N'Rau muong xao toi',NULL,1),
-    (32,N'Cai thia xao nam',7,65000,N'Cai thia xao nam',NULL,1),
-    (33,N'Rau cu luoc kho quat',7,59000,N'Rau cu luoc kho quat',NULL,1),
-    (34,N'Dau hu sot ca',7,69000,N'Dau hu sot ca',NULL,1),
-    (35,N'Nam xao bo',7,79000,N'Nam xao bo',NULL,1),
-    (36,N'Com trang',8,15000,N'Com trang phan',NULL,1),
-    (37,N'Com chien hai san',8,89000,N'Com chien hai san',NULL,1),
-    (38,N'Com chien duong chau',8,79000,N'Com chien duong chau',NULL,1),
-    (39,N'Com ga nuong',8,85000,N'Com ga nuong',NULL,1),
-    (40,N'Com suon nuong',8,89000,N'Com suon nuong',NULL,1),
-    (41,N'Pho bo tai',9,75000,N'Pho bo tai',NULL,1),
-    (42,N'Pho bo chin',9,75000,N'Pho bo chin',NULL,1),
-    (43,N'Bun cha Ha Noi',9,79000,N'Bun cha Ha Noi',NULL,1),
-    (44,N'Bun bo Hue',9,79000,N'Bun bo Hue',NULL,1),
-    (45,N'Mi xao bo',9,85000,N'Mi xao bo rau cai',NULL,1),
-    (46,N'Lau thai hai san',10,329000,N'Lau thai hai san 2-3 nguoi',NULL,1),
-    (47,N'Lau ga la e',10,299000,N'Lau ga la e',NULL,1),
-    (48,N'Lau bo nhung dam',10,349000,N'Lau bo nhung dam',NULL,1),
-    (49,N'Lau nam',10,279000,N'Lau nam rau cu',NULL,1),
-    (50,N'Lau ca',10,299000,N'Lau ca chua cay',NULL,1),
-    (51,N'Che khuc bach',11,45000,N'Che khuc bach',NULL,1),
-    (52,N'Rau cau dua',11,35000,N'Rau cau dua tuoi',NULL,1),
-    (53,N'Banh flan',11,30000,N'Banh flan caramel',NULL,1),
-    (54,N'Trai cay theo mua',11,59000,N'Dia trai cay theo mua',NULL,1),
-    (55,N'Kem tuoi',11,39000,N'Kem tuoi nhieu vi',NULL,1),
-    (56,N'Tra da',12,10000,N'Tra da',NULL,1),
-    (57,N'Tra chanh',12,25000,N'Tra chanh tuoi',NULL,1),
-    (58,N'Tra dao',12,35000,N'Tra dao cam sa',NULL,1),
-    (59,N'Nuoc ep cam',12,39000,N'Nuoc ep cam tuoi',NULL,1),
-    (60,N'Nuoc ep dua hau',12,35000,N'Nuoc ep dua hau',NULL,1),
-    (61,N'Bap rang bo',1,35000,N'Bap rang bo',NULL,1),
-    (62,N'Xuc xich chien',1,45000,N'Xuc xich chien',NULL,1),
-    (63,N'Pho mai que',1,49000,N'Pho mai que',NULL,1),
-    (64,N'Banh mi bo toi',1,39000,N'Banh mi bo toi',NULL,1),
-    (65,N'Chao tom',1,69000,N'Chao tom nuong',NULL,1),
-    (66,N'Goi rau tien vua',2,69000,N'Goi rau tien vua',NULL,1),
-    (67,N'Goi cu hu dua',2,79000,N'Goi cu hu dua tom thit',NULL,1),
-    (68,N'Goi ca mai',2,99000,N'Goi ca mai',NULL,1),
-    (69,N'Nom tai heo',2,75000,N'Nom tai heo',NULL,1),
-    (70,N'Goi bo bop thau',2,95000,N'Goi bo bop thau',NULL,1),
-    (71,N'Ga chien gion',3,129000,N'Ga chien gion',NULL,1),
-    (72,N'Ga sot bo toi',3,159000,N'Ga sot bo toi',NULL,1),
-    (73,N'Ga nuong muoi ot',3,165000,N'Ga nuong muoi ot',NULL,1),
-    (74,N'Uc ga ap chao',3,139000,N'Uc ga ap chao',NULL,1),
-    (75,N'Ga nau lagu',3,149000,N'Ga nau lagu',NULL,1),
-    (76,N'Bo xao hanh tay',4,149000,N'Bo xao hanh tay',NULL,1),
-    (77,N'Bo ham tieu xanh',4,169000,N'Bo ham tieu xanh',NULL,1),
-    (78,N'Bo cuon nam kim cham',4,179000,N'Bo cuon nam kim cham',NULL,1),
-    (79,N'Bo nuong sot BBQ',4,189000,N'Bo nuong sot BBQ',NULL,1),
-    (80,N'Bo xao can toi',4,145000,N'Bo xao can toi',NULL,1),
-    (81,N'Cha lua chien',5,79000,N'Cha lua chien',NULL,1),
-    (82,N'Suon non ram man',5,149000,N'Suon non ram man',NULL,1),
-    (83,N'Ba roi chien mam',5,139000,N'Ba roi chien mam',NULL,1),
-    (84,N'Nem nuong',5,99000,N'Nem nuong',NULL,1),
-    (85,N'Dui heo ham',5,159000,N'Dui heo ham',NULL,1),
-    (86,N'Ca loc hap bau',6,189000,N'Ca loc hap bau',NULL,1),
-    (87,N'Ca basa kho to',6,119000,N'Ca basa kho to',NULL,1),
-    (88,N'Ngheu hap sa',6,99000,N'Ngheu hap sa',NULL,1),
-    (89,N'Vem nuong mo hanh',6,129000,N'Vem nuong mo hanh',NULL,1),
-    (90,N'Bach tuoc nuong',6,169000,N'Bach tuoc nuong',NULL,1),
-    (91,N'Bong cai xao toi',7,65000,N'Bong cai xao toi',NULL,1),
-    (92,N'Ca tim nuong mo hanh',7,69000,N'Ca tim nuong mo hanh',NULL,1),
-    (93,N'Dau que xao toi',7,59000,N'Dau que xao toi',NULL,1),
-    (94,N'Kho qua xao trung',7,59000,N'Kho qua xao trung',NULL,1),
-    (95,N'Rau thap cam xao',7,69000,N'Rau thap cam xao',NULL,1),
-    (96,N'Com chien trung',8,59000,N'Com chien trung',NULL,1),
-    (97,N'Com chien bo',8,89000,N'Com chien bo',NULL,1),
-    (98,N'Com ga xoi mo',8,89000,N'Com ga xoi mo',NULL,1),
-    (99,N'Com ca kho to',8,85000,N'Com ca kho to',NULL,1),
-    (100,N'Com bo luc lac',8,99000,N'Com bo luc lac',NULL,1);
+    (1,N'Khoai tây chiên',1,45000,N'Khoai tây chiên giòn',NULL,1),
+    (2,N'Nem rán',1,55000,N'Nem rán truyền thống',NULL,1),
+    (3,N'Chả giò hải sản',1,65000,N'Chả giò nhân hải sản',NULL,1),
+    (4,N'Cánh gà chiên nước mắm',1,79000,N'Cánh gà chiên nước mắm',NULL,1),
+    (5,N'Bánh xếp chiên',1,50000,N'Bánh xếp chiên giòn',NULL,1),
+    (6,N'Gỏi ngó sen tôm thịt',2,85000,N'Gỏi ngó sen tôm thịt',NULL,1),
+    (7,N'Gỏi bò rau thơm',2,89000,N'Gỏi bò rau thơm',NULL,1),
+    (8,N'Nộm đu đủ bò khô',2,75000,N'Nộm đu đủ bò khô',NULL,1),
+    (9,N'Gỏi gà xé phay',2,79000,N'Gỏi gà xé phay',NULL,1),
+    (10,N'Gỏi xoài tôm',2,82000,N'Gỏi xoài xanh tôm tươi',NULL,1),
+    (11,N'Gà nướng mật ong',3,159000,N'Gà nướng mật ong',NULL,1),
+    (12,N'Gà hấp lá chanh',3,149000,N'Gà hấp lá chanh',NULL,1),
+    (13,N'Gà rang muối',3,169000,N'Gà rang muối',NULL,1),
+    (14,N'Gà sốt me',3,155000,N'Gà chiên sốt me',NULL,1),
+    (15,N'Cánh gà nướng sả',3,99000,N'Cánh gà nướng sả',NULL,1),
+    (16,N'Bò lúc lắc',4,169000,N'Bò lúc lắc khoai tây',NULL,1),
+    (17,N'Bò xào lúc lắc',4,159000,N'Bò xào rau củ',NULL,1),
+    (18,N'Bò bít tết',4,189000,N'Bò bít tết sốt tiêu',NULL,1),
+    (19,N'Bò sốt vang',4,149000,N'Bò sốt vang ăn kèm bánh mì',NULL,1),
+    (20,N'Bò nướng lá lốt',4,139000,N'Bò nướng lá lốt',NULL,1),
+    (21,N'Sườn heo nướng',5,149000,N'Sườn heo nướng mật ong',NULL,1),
+    (22,N'Sườn xào chua ngọt',5,139000,N'Sườn xào chua ngọt',NULL,1),
+    (23,N'Ba chỉ rang cháy cạnh',5,119000,N'Ba chỉ rang cháy cạnh',NULL,1),
+    (24,N'Thịt kho trứng',5,99000,N'Thịt kho trứng',NULL,1),
+    (25,N'Heo quay',5,159000,N'Heo quay da giòn',NULL,1),
+    (26,N'Tôm rang muối',6,179000,N'Tôm rang muối',NULL,1),
+    (27,N'Mực chiên giòn',6,139000,N'Mực chiên giòn',NULL,1),
+    (28,N'Mực xào sả ớt',6,149000,N'Mực xào sả ớt',NULL,1),
+    (29,N'Cá chiên xù',6,159000,N'Cá chiên xù',NULL,1),
+    (30,N'Tôm hấp bia',6,189000,N'Tôm hấp bia',NULL,1),
+    (31,N'Rau muống xào tỏi',7,55000,N'Rau muống xào tỏi',NULL,1),
+    (32,N'Cải thìa xào nấm',7,65000,N'Cải thìa xào nấm',NULL,1),
+    (33,N'Rau củ luộc kho quẹt',7,59000,N'Rau củ luộc kho quẹt',NULL,1),
+    (34,N'Đậu hũ sốt cà',7,69000,N'Đậu hũ sốt cà',NULL,1),
+    (35,N'Nấm xào bò',7,79000,N'Nấm xào bò',NULL,1),
+    (36,N'Cơm trắng',8,15000,N'Cơm trắng phần',NULL,1),
+    (37,N'Cơm chiên hải sản',8,89000,N'Cơm chiên hải sản',NULL,1),
+    (38,N'Cơm chiên Dương Châu',8,79000,N'Cơm chiên Dương Châu',NULL,1),
+    (39,N'Cơm gà nướng',8,85000,N'Cơm gà nướng',NULL,1),
+    (40,N'Cơm sườn nướng',8,89000,N'Cơm sườn nướng',NULL,1),
+    (41,N'Phở bò tái',9,75000,N'Phở bò tái',NULL,1),
+    (42,N'Phở bò chín',9,75000,N'Phở bò chín',NULL,1),
+    (43,N'Bún chả Hà Nội',9,79000,N'Bún chả Hà Nội',NULL,1),
+    (44,N'Bún bò Huế',9,79000,N'Bún bò Huế',NULL,1),
+    (45,N'Mì xào bò',9,85000,N'Mì xào bò rau cải',NULL,1),
+    (46,N'Lẩu Thái hải sản',10,329000,N'Lẩu Thái hải sản 2–3 người',NULL,1),
+    (47,N'Lẩu gà lá é',10,299000,N'Lẩu gà lá é',NULL,1),
+    (48,N'Lẩu bò nhúng dấm',10,349000,N'Lẩu bò nhúng dấm',NULL,1),
+    (49,N'Lẩu nấm',10,279000,N'Lẩu nấm rau củ',NULL,1),
+    (50,N'Lẩu cá',10,299000,N'Lẩu cá chua cay',NULL,1),
+    (51,N'Chè khúc bạch',11,45000,N'Chè khúc bạch',NULL,1),
+    (52,N'Rau câu dừa',11,35000,N'Rau câu dừa tươi',NULL,1),
+    (53,N'Bánh flan',11,30000,N'Bánh flan caramel',NULL,1),
+    (54,N'Trái cây theo mùa',11,59000,N'Đĩa trái cây theo mùa',NULL,1),
+    (55,N'Kem tươi',11,39000,N'Kem tươi nhiều vị',NULL,1),
+    (56,N'Trà đá',12,10000,N'Trà đá',NULL,1),
+    (57,N'Trà chanh',12,25000,N'Trà chanh tươi',NULL,1),
+    (58,N'Trà đào',12,35000,N'Trà đào cam sả',NULL,1),
+    (59,N'Nước ép cam',12,39000,N'Nước ép cam tươi',NULL,1),
+    (60,N'Nước ép dưa hấu',12,35000,N'Nước ép dưa hấu',NULL,1),
+    (61,N'Bắp rang bơ',1,35000,N'Bắp rang bơ',NULL,1),
+    (62,N'Xúc xích chiên',1,45000,N'Xúc xích chiên',NULL,1),
+    (63,N'Phô mai que',1,49000,N'Phô mai que',NULL,1),
+    (64,N'Bánh mì bơ tỏi',1,39000,N'Bánh mì bơ tỏi',NULL,1),
+    (65,N'Chạo tôm',1,69000,N'Chạo tôm nướng',NULL,1),
+    (66,N'Gỏi rau tiến vua',2,69000,N'Gỏi rau tiến vua',NULL,1),
+    (67,N'Gỏi củ hũ dừa',2,79000,N'Gỏi củ hũ dừa tôm thịt',NULL,1),
+    (68,N'Gỏi cá mai',2,99000,N'Gỏi cá mai',NULL,1),
+    (69,N'Nộm tai heo',2,75000,N'Nộm tai heo',NULL,1),
+    (70,N'Gỏi bò bóp thấu',2,95000,N'Gỏi bò bóp thấu',NULL,1),
+    (71,N'Gà chiên giòn',3,129000,N'Gà chiên giòn',NULL,1),
+    (72,N'Gà sốt bơ tỏi',3,159000,N'Gà sốt bơ tỏi',NULL,1),
+    (73,N'Gà nướng muối ớt',3,165000,N'Gà nướng muối ớt',NULL,1),
+    (74,N'Ức gà áp chảo',3,139000,N'Ức gà áp chảo',NULL,1),
+    (75,N'Gà nấu lagu',3,149000,N'Gà nấu lagu',NULL,1),
+    (76,N'Bò xào hành tây',4,149000,N'Bò xào hành tây',NULL,1),
+    (77,N'Bò hầm tiêu xanh',4,169000,N'Bò hầm tiêu xanh',NULL,1),
+    (78,N'Bò cuộn nấm kim châm',4,179000,N'Bò cuộn nấm kim châm',NULL,1),
+    (79,N'Bò nướng sốt BBQ',4,189000,N'Bò nướng sốt BBQ',NULL,1),
+    (80,N'Bò xào cần tỏi',4,145000,N'Bò xào cần tỏi',NULL,1),
+    (81,N'Chả lụa chiên',5,79000,N'Chả lụa chiên',NULL,1),
+    (82,N'Sườn non ram mặn',5,149000,N'Sườn non ram mặn',NULL,1),
+    (83,N'Ba rọi chiên mắm',5,139000,N'Ba rọi chiên mắm',NULL,1),
+    (84,N'Nem nướng',5,99000,N'Nem nướng',NULL,1),
+    (85,N'Đùi heo hầm',5,159000,N'Đùi heo hầm',NULL,1),
+    (86,N'Cá lóc hấp bầu',6,189000,N'Cá lóc hấp bầu',NULL,1),
+    (87,N'Cá basa kho tộ',6,119000,N'Cá basa kho tộ',NULL,1),
+    (88,N'Nghêu hấp sả',6,99000,N'Nghêu hấp sả',NULL,1),
+    (89,N'Vẹm nướng mỡ hành',6,129000,N'Vẹm nướng mỡ hành',NULL,1),
+    (90,N'Bạch tuộc nướng',6,169000,N'Bạch tuộc nướng',NULL,1),
+    (91,N'Bông cải xào tỏi',7,65000,N'Bông cải xào tỏi',NULL,1),
+    (92,N'Cà tím nướng mỡ hành',7,69000,N'Cà tím nướng mỡ hành',NULL,1),
+    (93,N'Đậu que xào tỏi',7,59000,N'Đậu que xào tỏi',NULL,1),
+    (94,N'Khổ qua xào trứng',7,59000,N'Khổ qua xào trứng',NULL,1),
+    (95,N'Rau thập cẩm xào',7,69000,N'Rau thập cẩm xào',NULL,1),
+    (96,N'Cơm chiên trứng',8,59000,N'Cơm chiên trứng',NULL,1),
+    (97,N'Cơm chiên bò',8,89000,N'Cơm chiên bò',NULL,1),
+    (98,N'Cơm gà xối mỡ',8,89000,N'Cơm gà xối mỡ',NULL,1),
+    (99,N'Cơm cá kho tộ',8,85000,N'Cơm cá kho tộ',NULL,1),
+    (100,N'Cơm bò lúc lắc',8,99000,N'Cơm bò lúc lắc',NULL,1);
     SET IDENTITY_INSERT dbo.MenuItems OFF;
 
     /* 5. DINING TABLES */
     SET IDENTITY_INSERT dbo.DiningTables ON;
     INSERT INTO dbo.DiningTables (TableID, TableName, QRCode, Capacity, TableStatus)
     VALUES
-    (1,N'Ban 01','QR-TABLE-01',2,N'Trong'),(2,N'Ban 02','QR-TABLE-02',2,N'Trong'),
-    (3,N'Ban 03','QR-TABLE-03',2,N'Trong'),(4,N'Ban 04','QR-TABLE-04',2,N'Trong'),
-    (5,N'Ban 05','QR-TABLE-05',4,N'Trong'),(6,N'Ban 06','QR-TABLE-06',4,N'Trong'),
-    (7,N'Ban 07','QR-TABLE-07',4,N'Trong'),(8,N'Ban 08','QR-TABLE-08',4,N'Trong'),
-    (9,N'Ban 09','QR-TABLE-09',4,N'Trong'),(10,N'Ban 10','QR-TABLE-10',4,N'Trong'),
-    (11,N'Ban 11','QR-TABLE-11',4,N'Trong'),(12,N'Ban 12','QR-TABLE-12',4,N'Trong'),
-    (13,N'Ban 13','QR-TABLE-13',4,N'Trong'),(14,N'Ban 14','QR-TABLE-14',4,N'Trong'),
-    (15,N'Ban 15','QR-TABLE-15',4,N'Trong'),(16,N'Ban 16','QR-TABLE-16',6,N'Trong'),
-    (17,N'Ban 17','QR-TABLE-17',6,N'Trong'),(18,N'Ban 18','QR-TABLE-18',6,N'Trong'),
-    (19,N'Ban 19','QR-TABLE-19',6,N'Trong'),(20,N'Ban 20','QR-TABLE-20',6,N'Trong'),
-    (21,N'Ban 21','QR-TABLE-21',8,N'Trong'),(22,N'Ban 22','QR-TABLE-22',8,N'Trong'),
-    (23,N'Ban 23','QR-TABLE-23',8,N'Trong'),(24,N'Ban 24','QR-TABLE-24',8,N'Trong'),
-    (25,N'Ban 25','QR-TABLE-25',10,N'Trong'),(26,N'Ban 26','QR-TABLE-26',10,N'Trong'),
-    (27,N'Ban 27','QR-TABLE-27',10,N'Trong'),(28,N'Ban 28','QR-TABLE-28',4,N'Trong'),
-    (29,N'Ban 29','QR-TABLE-29',6,N'Trong'),(30,N'Ban 30','QR-TABLE-30',8,N'Trong');
+    (1,N'Bàn 01','QR-TABLE-01',2,N'Trong'),(2,N'Bàn 02','QR-TABLE-02',2,N'Trong'),
+    (3,N'Bàn 03','QR-TABLE-03',2,N'Trong'),(4,N'Bàn 04','QR-TABLE-04',2,N'Trong'),
+    (5,N'Bàn 05','QR-TABLE-05',4,N'Trong'),(6,N'Bàn 06','QR-TABLE-06',4,N'Trong'),
+    (7,N'Bàn 07','QR-TABLE-07',4,N'Trong'),(8,N'Bàn 08','QR-TABLE-08',4,N'Trong'),
+    (9,N'Bàn 09','QR-TABLE-09',4,N'Trong'),(10,N'Bàn 10','QR-TABLE-10',4,N'Trong'),
+    (11,N'Bàn 11','QR-TABLE-11',4,N'Trong'),(12,N'Bàn 12','QR-TABLE-12',4,N'Trong'),
+    (13,N'Bàn 13','QR-TABLE-13',4,N'Trong'),(14,N'Bàn 14','QR-TABLE-14',4,N'Trong'),
+    (15,N'Bàn 15','QR-TABLE-15',4,N'Trong'),(16,N'Bàn 16','QR-TABLE-16',6,N'Trong'),
+    (17,N'Bàn 17','QR-TABLE-17',6,N'Trong'),(18,N'Bàn 18','QR-TABLE-18',6,N'Trong'),
+    (19,N'Bàn 19','QR-TABLE-19',6,N'Trong'),(20,N'Bàn 20','QR-TABLE-20',6,N'Trong'),
+    (21,N'Bàn 21','QR-TABLE-21',8,N'Trong'),(22,N'Bàn 22','QR-TABLE-22',8,N'Trong'),
+    (23,N'Bàn 23','QR-TABLE-23',8,N'Trong'),(24,N'Bàn 24','QR-TABLE-24',8,N'Trong'),
+    (25,N'Bàn 25','QR-TABLE-25',10,N'Trong'),(26,N'Bàn 26','QR-TABLE-26',10,N'Trong'),
+    (27,N'Bàn 27','QR-TABLE-27',10,N'Trong'),(28,N'Bàn 28','QR-TABLE-28',4,N'Trong'),
+    (29,N'Bàn 29','QR-TABLE-29',6,N'Trong'),(30,N'Bàn 30','QR-TABLE-30',8,N'Trong');
     SET IDENTITY_INSERT dbo.DiningTables OFF;
 
     /* 6. ORDERS - 300 don trong 90 ngay gan nhat */
@@ -227,8 +228,8 @@ BEGIN TRY
             (OrderID, OrderCode, TableID, EmployeeID, OrderTime, OrderStatus, Note)
         VALUES
             (@i, @orderCode, @tableID, @employeeID, @orderTime, @orderStatus,
-             CASE WHEN @i % 9 = 0 THEN N'Khach yeu cau it cay'
-                  WHEN @i % 13 = 0 THEN N'Khach co tre em'
+             CASE WHEN @i % 9 = 0 THEN N'Khách yêu cầu ít cay'
+                  WHEN @i % 13 = 0 THEN N'Khách có trẻ em'
                   ELSE NULL END);
         SET @i += 1;
     END;
@@ -275,7 +276,7 @@ BEGIN TRY
             VALUES
                 (@detailID, @orderID, @menuID, @quantity, @price, @itemStatus,
                  @orderedAt, @startedAt, @completedAt, @servedAt,
-                 CASE WHEN @j = 3 AND @orderID % 10 = 0 THEN N'Khong hanh' ELSE NULL END);
+                 CASE WHEN @j = 3 AND @orderID % 10 = 0 THEN N'Không hành' ELSE NULL END);
 
             SET @detailID += 1;
             SET @j += 1;
@@ -317,7 +318,7 @@ BEGIN TRY
         INSERT INTO dbo.OrderStatusHistory
             (OrderID, OldStatus, NewStatus, ChangedAt, EmployeeID, Note)
         VALUES
-            (@historyOrderID, NULL, N'Moi', @historyTime, ((@historyOrderID - 1) % 5) + 6, N'Tao don hang');
+            (@historyOrderID, NULL, N'Moi', @historyTime, ((@historyOrderID - 1) % 5) + 6, N'Tạo đơn hàng');
 
         IF @historyStatus <> N'Moi'
         BEGIN
@@ -328,7 +329,7 @@ BEGIN TRY
                  CASE WHEN @historyStatus = N'Da huy' THEN N'Da huy'
                       ELSE N'Dang xu ly' END,
                  DATEADD(minute, 5, @historyTime), ((@historyOrderID - 1) % 5) + 6,
-                 N'Tiep nhan don hang');
+                 N'Tiếp nhận đơn hàng');
         END;
 
         IF @historyStatus IN (N'Da thanh toan',N'Hoan thanh')
@@ -338,7 +339,7 @@ BEGIN TRY
             VALUES
                 (@historyOrderID, N'Dang xu ly', N'Hoan thanh',
                  DATEADD(minute, 25, @historyTime), ((@historyOrderID - 1) % 5) + 6,
-                 N'Hoan tat phuc vu');
+                 N'Hoàn tất phục vụ');
         END;
 
         IF @historyStatus = N'Da thanh toan'
@@ -348,7 +349,7 @@ BEGIN TRY
             VALUES
                 (@historyOrderID, N'Hoan thanh', N'Da thanh toan',
                  DATEADD(minute, 30, @historyTime), ((@historyOrderID - 1) % 3) + 3,
-                 N'Da thanh toan');
+                 N'Đã thanh toán');
         END;
         SET @historyOrderID += 1;
     END;
@@ -368,7 +369,7 @@ BEGIN TRY
         INSERT INTO dbo.OrderDetailStatusHistory
             (OrderDetailID, OldStatus, NewStatus, ChangedAt, EmployeeID, Note)
         VALUES
-            (@historyDetailID, NULL, N'Moi', @detailOrderedAt, @detailEmployeeID, N'Tiep nhan mon');
+            (@historyDetailID, NULL, N'Moi', @detailOrderedAt, @detailEmployeeID, N'Tiếp nhận món');
 
         IF @detailStatus <> N'Moi'
         BEGIN
@@ -378,7 +379,7 @@ BEGIN TRY
                 (@historyDetailID, N'Moi',
                  CASE WHEN @detailStatus = N'Da huy' THEN N'Da huy'
                       ELSE N'Dang che bien' END,
-                 DATEADD(minute, 5, @detailOrderedAt), 11, N'Bep tiep nhan mon');
+                 DATEADD(minute, 5, @detailOrderedAt), 11, N'Bếp tiếp nhận món');
         END;
 
         IF @detailStatus IN (N'San sang',N'Da phuc vu')
@@ -387,7 +388,7 @@ BEGIN TRY
                 (OrderDetailID, OldStatus, NewStatus, ChangedAt, EmployeeID, Note)
             VALUES
                 (@historyDetailID, N'Dang che bien', N'San sang',
-                 DATEADD(minute, 20, @detailOrderedAt), 11, N'Mon da che bien xong');
+                 DATEADD(minute, 20, @detailOrderedAt), 11, N'Món đã chế biến xong');
         END;
 
         IF @detailStatus = N'Da phuc vu'
@@ -396,7 +397,7 @@ BEGIN TRY
                 (OrderDetailID, OldStatus, NewStatus, ChangedAt, EmployeeID, Note)
             VALUES
                 (@historyDetailID, N'San sang', N'Da phuc vu',
-                 DATEADD(minute, 25, @detailOrderedAt), 6, N'Da phuc vu khach');
+                 DATEADD(minute, 25, @detailOrderedAt), 6, N'Đã phục vụ khách');
         END;
 
         SET @historyDetailID += 1;
